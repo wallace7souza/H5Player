@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.1.0.59861 -->
+    <meta charset="utf-8">
+    <title>MP3Player - HTML5</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="html5Player/style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="html5Player/style.responsive.css" media="all">
+
+
+    
+
+
+<style>.art-content .art-postcontent-0 .layout-item-0 { padding-right: 10px;padding-left: 10px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+</style></head>
+<body id="mp3playerBody">
+<div id="art-main">
+<header class="art-header">
+
+
+    <div class="art-shapes">
+            </div>
+<h1 class="art-headline" style="left:34.83%">
+    
+    <!-- <img id="prevBtn" src="html5Player/images/player/previous.png">
+    <img id="playBtn" src="html5Player/images/player/play.png">
+    <img id="pauseBtn" src="html5Player/images/player/pause.png" style="display:none">
+    <img id="nextBtn" src="html5Player/images/player/next.png"> -->
+    <!-- <div id="nowPlayingText"> uhuuuu </div> -->
+<audio id="player" controls >Your browser does not support the marvelous HTML5 audio tag! Go get a better one.</audio>
+<br/>
+<input type="file" name="file_input[]" id="file_input" multiple="" webkitdirectory="">
+</h1>
+                
+                    
+</header>
+<div class="art-sheet clearfix">
+<nav class="art-nav">
+    <!-- <ul class="art-hmenu"><li><a href="home.html" class="active">Home</a><ul class="active"><li><a href="home/new-page.html">Subpage 1</a></li><li><a href="home/new-page-2.html">Subpage 2</a></li><li><a href="home/new-page-3.html">Subpage 3</a></li></ul></li><li><a href="blog.html">Blog</a></li></ul>  -->
+    </nav>
+<div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content"><article class="art-post art-article">
+                                <h2 class="art-postheader"><!-- Home -->
+
+                                </h2>
+                                                
+                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div id="colmain" class="art-layout-cell layout-item-0" style="width: 100%;text-align:center;">
+      
+        
+        <input type="text" name="filterText" id="filterText">
+        <div id="playlistDiv" style="text-align:left;overflow-y:scroll;width:100%;">
+                      
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+</article></div>
+                    </div>
+                </div>
+            </div><footer class="art-footer">
+<p><br></p>
+<p>Copyright © 2013. All Rights Reserved.</p>
+</footer>
+
+    </div>
+    <p class="art-page-footer">
+        <span id="art-footnote-links"><a href="http://www.artisteer.com/" target="_blank">Web Template</a> created with Artisteer.</span>
+    </p>
+</div>
+
+<script type="text/javascript" src="./html5Player/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="./html5Player/util.js" ></script>
+<script type="text/javascript">
+
+ $(document).ready(function(){
+
+$("#file_input").change(handleFileSelect);
+
+$("#filterText").keydown(filterMP3Musics);
+// var file_drop = document.getElementById('mp3playerBody'); 
+// file_drop.addEventListener('dragover', handleDragOver, false); 
+// file_drop.addEventListener('drop', dropPath, false);
+
+});
+
+</script>
+
+</body></html>
