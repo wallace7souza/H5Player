@@ -27,20 +27,20 @@ $(document).ready(function(){
 	                       return false;
 	                   });
 
-$(document).bind('keydown', 'Ctrl+home', function assets() {
-			readMP3(0);	  
-	                       return true;
-	                   });
+// $(document).bind('keydown', 'Ctrl+home', function assets() {
+// 			readMP3(0);	  
+// 	                       return true;
+// 	                   });
 
 // $(document).bind('keydown', 'Ctrl+end', function assets() {
 // 			readMP3(playListArray.length-1);	  
 // 	                       return true;
 // 	                   });
 
-// $(document).bind('keydown', 'Ctrl+insert', function assets() {
-// 			$("#fileSelect").click();
-// 	                       return false;
-// 	                   });
+$(document).bind('keydown', 'Ctrl+insert', function assets() {
+			$("#fileSelect").click();
+	                       return false;
+	                   });
 
 
 	
