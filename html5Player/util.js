@@ -53,6 +53,7 @@ function clearAll(){
     var files = evt.target.files; // FileList object
     totalFiles = files.length;
 
+if(totalFiles==0) return;
 divh = $( window ).height()-110-95;
 $("#colmain,#playlistDiv").attr('height',divh+'px');
   clearAll();

@@ -37,6 +37,11 @@ $(document).bind('keydown', 'Ctrl+end', function assets() {
 	                       return true;
 	                   });
 
+$(document).bind('keydown', 'Ctrl+insert', function assets() {
+			$("#fileSelect").click();
+	                       return false;
+	                   });
+
 
 	
 });
