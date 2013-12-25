@@ -2,6 +2,38 @@ var playListArray = [];
 var totalFiles = 0;
 var idxPlaying = -1;
 
+
+$(document).ready(function(){
+
+$("#file_input").change(handleFileSelect);
+
+$("#filterText").keyup(filterMP3Musics);
+
+//fazendo o player acompanhar o scroll
+var $sidebar   = $("#player").parent() ;
+        $window    = $(window),
+        offset     = $sidebar.offset(),
+        topPadding = 15;
+
+ $window.scroll(function() {
+        if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        } else {
+            $sidebar.stop().animate({
+                marginTop: 0
+            });
+        }
+    });
+
+
+});
+
+
+
+
+
 var freader = new FileReader();
 freader.onload = function(e) { 
    document.getElementById('player').src = e.target.result; 
@@ -67,8 +99,8 @@ $("#filterText").show();
 $("#playlistDiv p").each(function(idx,p){
 
     $(p).dblclick(function(){
-  $("#nowPlayingText").text($(p).text());
-
+  // $("#nowPlayingText").text($(p).text());
+      console.log('play track: '+idx);
       readMP3(idx);
 
     });
@@ -81,10 +113,24 @@ $("#playlistDiv p").each(function(idx,p){
 
 function readMP3(idx){
 
-      freader.readAsDataURL(playListArray[idx]);
-      idxPlaying=idx;
+  if(idx<0 || idx>playListArray.length){
+    return;
+  }
+
+  // playingNow
+  $("#playlistDiv p.playingNow").removeClass('playingNow');
+  $("#nowPlayingText").text($("#playlistDiv p:eq("+idx+")").addClass('playingNow').text());
+  freader.readAsDataURL(playListArray[idx]);
+  idxPlaying=idx;
 
 }
+
+//proxima musica da lista
+$('#player').on('ended', function() {
+
+   readMP3(++idxPlaying);
+
+});
 
 function filterMP3Musics(){
 
@@ -96,7 +142,7 @@ if($("#filterText").val()==''){
 }
 else{
   $("#playlistDiv p").each(function(idx,p){
-    if($(p).html().indexOf($("#filterText").val())>-1){
+    if($(p).text().toLowerCase().indexOf($("#filterText").val().toLowerCase())>-1){
       $(p).show();
     }else{
       $(p).hide();

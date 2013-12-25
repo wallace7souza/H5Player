@@ -17,6 +17,14 @@
 .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
 .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
 
+.playingNow {font-weight:bold; background-color: #e5eecc}
+#playlistDiv p {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+
+}
 </style></head>
 <body id="mp3playerBody">
 <div id="art-main">
@@ -24,13 +32,14 @@
 
     <div class="art-shapes">
             </div>
+
 <h1 class="art-headline" data-left="6.67%">
     <a >
 <marquee behavior="alternate" id="nowPlayingText">H5Player.</marquee> 
     </a>
   
 </h1>
-<h2 class="art-slogan" data-left="38.14%"><audio id="player" controls ></audio></h2>
+<h2 class="art-slogan" data-left="38.14%" ><audio id="player" controls ></audio></h2>
                 
                     
 </header>
@@ -57,7 +66,7 @@
         <input type="file" name="file_input[]" id="file_input" multiple="" webkitdirectory="" style="display:none">
         <input type="text" name="filterText" id="filterText" style="display:none">
         
-        <div id="playlistDiv" style="text-align:left;overflow-y:scroll;width:100%;">
+        <div id="playlistDiv" style="text-align:left;width:100%;">
                       
         </div>
     </div>
@@ -81,20 +90,8 @@
 </div>
 
 <script type="text/javascript" src="./html5Player/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="./html5Player/jquery.hotkeys.js"></script>
 <script type="text/javascript" src="./html5Player/util.js" ></script>
-<script type="text/javascript">
-
- $(document).ready(function(){
-
-$("#file_input").change(handleFileSelect);
-
-$("#filterText").keydown(filterMP3Musics);
-// var file_drop = document.getElementById('mp3playerBody'); 
-// file_drop.addEventListener('dragover', handleDragOver, false); 
-// file_drop.addEventListener('drop', dropPath, false);
-
-});
-
-</script>
+<script type="text/javascript" src="./html5Player/keybinding.js" ></script>
 
 </body></html>
