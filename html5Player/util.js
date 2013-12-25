@@ -14,6 +14,7 @@ function clearAll(){
   $("#playlistDiv p").remove();
   idxPlaying = -1;
   playListArray = [];
+  $("#filterText").hide();
 }
 
  function handleFileSelect(evt) {
@@ -62,9 +63,11 @@ $("#colmain,#playlistDiv").attr('height',divh+'px');
 */
     }
 
+$("#filterText").show();
 $("#playlistDiv p").each(function(idx,p){
 
     $(p).dblclick(function(){
+  $("#nowPlayingText").text($(p).text());
 
       readMP3(idx);
 

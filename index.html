@@ -22,41 +22,41 @@
 <div id="art-main">
 <header class="art-header">
 
-
     <div class="art-shapes">
             </div>
-<h1 class="art-headline" style="left:34.83%">
-    
-    <!-- <img id="prevBtn" src="html5Player/images/player/previous.png">
-    <img id="playBtn" src="html5Player/images/player/play.png">
-    <img id="pauseBtn" src="html5Player/images/player/pause.png" style="display:none">
-    <img id="nextBtn" src="html5Player/images/player/next.png"> -->
-    <!-- <div id="nowPlayingText"> uhuuuu </div> -->
-<audio id="player" controls >Your browser does not support the marvelous HTML5 audio tag! Go get a better one.</audio>
-<br/>
-<input type="file" name="file_input[]" id="file_input" multiple="" webkitdirectory="">
+<h1 class="art-headline" data-left="6.67%">
+    <a >
+<marquee behavior="alternate" id="nowPlayingText">H5Player.</marquee> 
+    </a>
+  
 </h1>
+<h2 class="art-slogan" data-left="38.14%"><audio id="player" controls ></audio></h2>
                 
                     
 </header>
 <div class="art-sheet clearfix">
 <nav class="art-nav">
+    <ul>
+<li><button id="fileSelect" onclick="$('#file_input').click()">Carregar músicas</button></li>
+    </ul>
     <!-- <ul class="art-hmenu"><li><a href="home.html" class="active">Home</a><ul class="active"><li><a href="home/new-page.html">Subpage 1</a></li><li><a href="home/new-page-2.html">Subpage 2</a></li><li><a href="home/new-page-3.html">Subpage 3</a></li></ul></li><li><a href="blog.html">Blog</a></li></ul>  -->
     </nav>
 <div class="art-layout-wrapper">
                 <div class="art-content-layout">
                     <div class="art-content-layout-row">
                         <div class="art-layout-cell art-content"><article class="art-post art-article">
-                                <h2 class="art-postheader"><!-- Home -->
-
+                                <h2 class="art-postheader" ><!-- Home -->
                                 </h2>
                                                 
                 <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
     <div class="art-content-layout-row">
+    
+
     <div id="colmain" class="art-layout-cell layout-item-0" style="width: 100%;text-align:center;">
       
+        <input type="file" name="file_input[]" id="file_input" multiple="" webkitdirectory="" style="display:none">
+        <input type="text" name="filterText" id="filterText" style="display:none">
         
-        <input type="text" name="filterText" id="filterText">
         <div id="playlistDiv" style="text-align:left;overflow-y:scroll;width:100%;">
                       
         </div>
