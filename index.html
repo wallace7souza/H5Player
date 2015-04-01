@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head><!-- Created by Artisteer v4.1.0.59861 -->
+    <meta charset="utf-8">
+    <title>MP3Player - HTML5</title>
+    <meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+
+    <!--[if lt IE 9]><script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="stylesheet" href="html5Player/style.css" media="screen">
+    <!--[if lte IE 7]><link rel="stylesheet" href="style.ie7.css" media="screen" /><![endif]-->
+    <link rel="stylesheet" href="html5Player/style.responsive.css" media="all">
+
+
+    
+
+
+<style>.art-content .art-postcontent-0 .layout-item-0 { padding-right: 10px;padding-left: 10px;  }
+.ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+.ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+
+.playingNow {font-weight:bold; background-color: #e5eecc}
+#playlistDiv p {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+
+}
+</style></head>
+<body id="mp3playerBody">
+<div id="art-main">
+<header class="art-header">
+
+    <div class="art-shapes">
+            </div>
+
+<h1 class="art-headline" data-left="6.67%">
+    <a >
+<marquee behavior="alternate" id="nowPlayingText">H5Player.</marquee> 
+    </a>
+  
+</h1>
+<h2 class="art-slogan" data-left="38.14%" ><audio id="player" controls ></audio>
+<img id="prevBtn" src="./html5Player/images/player/previous.png">
+<img id="nextBtn" src="./html5Player/images/player/next.png">
+</h2>
+                
+                    
+</header>
+<div class="art-sheet clearfix">
+<nav class="art-nav">
+    <ul>
+<li><button id="fileSelect" onclick="$('#file_input').click()">Carregar músicas</button></li>
+    </ul>
+    <!-- <ul class="art-hmenu"><li><a href="home.html" class="active">Home</a><ul class="active"><li><a href="home/new-page.html">Subpage 1</a></li><li><a href="home/new-page-2.html">Subpage 2</a></li><li><a href="home/new-page-3.html">Subpage 3</a></li></ul></li><li><a href="blog.html">Blog</a></li></ul>  -->
+    </nav>
+<div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content"><article class="art-post art-article">
+                                <h2 class="art-postheader" ><!-- Home -->
+                                </h2>
+                                                
+                <div class="art-postcontent art-postcontent-0 clearfix"><div class="art-content-layout">
+    <div class="art-content-layout-row">
+    
+
+    <div id="colmain" class="art-layout-cell layout-item-0" style="width: 100%;text-align:center;">
+      
+        <input type="file" name="file_input[]" id="file_input" multiple="" webkitdirectory="" style="display:none">
+        <input type="text" name="filterText" id="filterText" style="display:none">
+        
+        <div id="playlistDiv" style="text-align:left;width:100%;">
+                      
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+</article></div>
+                    </div>
+                </div>
+            </div><footer class="art-footer">
+<p><br></p>
+<p>Copyright © 2013. All Rights Reserved.</p>
+</footer>
+
+    </div>
+    <p class="art-page-footer">
+        <span id="art-footnote-links"><a href="http://www.artisteer.com/" target="_blank">Web Template</a> created with Artisteer.</span>
+    </p>
+</div>
+
+<script type="text/javascript" src="./html5Player/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="./html5Player/jquery.hotkeys.js"></script>
+<script type="text/javascript" src="./html5Player/util.js" ></script>
+<script type="text/javascript" src="./html5Player/keybinding.js" ></script>
+<script type="text/javascript" src="./html5Player/player.js" ></script>
+
+</body></html>
