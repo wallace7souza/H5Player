@@ -37,9 +37,13 @@ var $sidebar   = $("#player").parent() ;
 var freader = new FileReader();
 freader.onload = function(e) { 
    document.getElementById('player').src = e.target.result; 
+<<<<<<< HEAD
    document.getElementById('player').play();
 
     window.console.log(e.target);
+=======
+   document.getElementById('player').play(); 
+>>>>>>> e202009e46e4510e52a291edb96406d2f33a526c
 
     // freader.readAsDataURL(audiofiles[0]);
 }
@@ -72,7 +76,11 @@ $("#colmain,#playlistDiv").attr('height',divh+'px');
          continue;
        }
 
+<<<<<<< HEAD
   $("#playlistDiv").append('<p id="mp3'+i+'">'+f.name+'</p>');
+=======
+  $("#playlistDiv").append('<p>'+f.name+'</p>');
+>>>>>>> e202009e46e4510e52a291edb96406d2f33a526c
     playListArray.push(f);
 
 /*
@@ -126,12 +134,15 @@ function readMP3(idx){
   freader.readAsDataURL(playListArray[idx]);
   idxPlaying=idx;
 
+<<<<<<< HEAD
     window.console.log($('#mp3'+idx).offset().top);
     $('html, body').animate({
      scrollTop: $('#mp3'+idx).offset().top-55
      }, 100);
 
 
+=======
+>>>>>>> e202009e46e4510e52a291edb96406d2f33a526c
 }
 
 //proxima musica da lista
