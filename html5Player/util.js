@@ -56,14 +56,30 @@ function clearAll(){
     var files = evt.target.files; // FileList object
     totalFiles = files.length;
 
-if(totalFiles==0) return;
-divh = $( window ).height()-110-95;
-$("#colmain,#playlistDiv").attr('height',divh+'px');
+    if(totalFiles==0) return;
+    divh = $( window ).height()-110-95;
+    $("#colmain,#playlistDiv").attr('height',divh+'px');
   clearAll();
-  
-
 
    // Loop through the FileList and render image files as thumbnails.
+     var mp3Array = [];
+    for (var i = 0, f; f = files[i]; i++) {
+        if((f.type == 'audio/mp3')==false) {
+            continue;
+        }
+        mp3Array.push(f);
+
+    }
+
+     shuffle(mp3Array);
+
+     for(var x in mp3Array){
+         $("#playlistDiv").append('<p id="mp3'+x+'">'+mp3Array[x].name+'</p>');
+         playListArray.push(mp3Array[x]);
+     }
+
+
+     /*
     for (var i = 0, f; f = files[i]; i++) {
 
       // Only process image files.
@@ -76,7 +92,7 @@ $("#colmain,#playlistDiv").attr('height',divh+'px');
   $("#playlistDiv").append('<p id="mp3'+i+'">'+f.name+'</p>');
     playListArray.push(f);
 
-/*
+
       var reader = new FileReader();
 
       // Closure to capture the file information.
@@ -96,8 +112,9 @@ $("#colmain,#playlistDiv").attr('height',divh+'px');
 
       // Read in the image file as a data URL.
       reader.readAsDataURL(f);
-*/
+
     }
+      */
 
 $("#filterText").show();
 $("#playlistDiv p").each(function(idx,p){
@@ -161,4 +178,25 @@ else{
 
 
 }
+
+
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex ;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+}
+
 
